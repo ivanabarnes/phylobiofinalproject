@@ -27,13 +27,29 @@ OK, here we go.
 
 # Title of my project
 
+The effect of hidden paralogy and missing data on phylogenetic inference
+
 ## Introduction and Goals
 
-The goal of my project is to answer the question, What is...?
+The goal of my project is to answer the question, How do WGD events affect phylogenetic inference, 
+specifically when there is a lot of missing data within sequenced genomes?
+I hope to apply this to thinking about the uncertainty in the cyclostome phylogeny if I have time, 
+in which case I want to know whether the WGD before this split along with the large amount of 
+missing data for many of these taxa could be biasing the data and causing cyclostomes 
+to appear monophyletic even if they aren't.
 
-The methods I will use to do this are...
+The methods I will use to do this are data simulation and phylogenetic inference, primarily using R 
+and various programs on the cluster.
+My plan so far is to take an example sequence from an organism (I haven't decided which yet, 
+probably an invertebrate closely related to chordates that has really good sequence data), and
+simulate a duplication of the entire thing, and then molecular evolution over the sequences 
+over two divergence events. I will then take multiple random samples of a small subset of genes 
+from each resulting lineage, infer phylogenies for each sample, and evaluate how often my inference 
+matches the data that I simulated. If I have time, I will look into how cyclostome trees have
+been inferred in the past, and try to change aspects of my test to model that. 
 
-The data I will use are (my own data/ data publicly available at YYY/ simulations)
+The data I will use are primarily simulations, but they will be simulated from data publicly 
+available (probably on GenBank).
 
 ## Methods
 
