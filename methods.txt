@@ -1,0 +1,68 @@
+link to genbank genome:
+https://www.ncbi.nlm.nih.gov/nuccore/NC_020168.2
+
+gene 1 = 36-647
+
+complement(39427..41952)
+/gene="LOC100184865"
+/note="Derived by automated computational analysis using
+gene prediction method: Gnomon."
+/db_xref="GeneID:100184865"
+
+fasta file called tunicate_LOC100184865.fasta
+
+manually converted to phylip format --- tunicate_LOC100184865.phy
+manually duplicated the gene --- tunicate_LOC100184865_duplicated.phy
+
+created a fake tree to test this on -- cyclo.tre
+
+created a file for seqgen with the ancestral sequence --- cyclo.phy
+created a job file for seqgen --- job_seqgen.sh
+
+submitted batch job
+
+output: cyclo_jc_sim.fasta
+
+manually broke apart "paralogs" --- cyclo_jc_sim_paralogs_sep.fasta
+
+72 per line - 2526 total 
+35 lines, 6 bases
+
+chose 1st paralog for everything except lampreys and hagfish --- cyclo_jc_sim_one_paralog.fasta
+
+created job file for iqtree --- job_iqtree.sh
+
+submitted batch job
+
+output: cyclo_jc_sim_one_paralog.fasta.treefile and cyclo_jc_sim_one_paralog.fasta.contree
+
+***these didn't show the relationships at all, I think the mu is too big and the sequences are getting saturated
+
+chose 1st paralog for everything --- cyclo_jc_sim_one_paralog_all_first.fasta
+
+created job file for iqtree --- job_iqtree_all_first.sh
+
+output: cyclo_jc_sim_one_paralog_all_first.fasta.treefile and cyclo_jc_sim_one_paralog_all_first.fasta.contree
+
+***these didn't represent the relationships accurately either, but hagfish and lamprey did seem slightly further away
+
+created a job file for seqgen --- job_seqgen_shorter.sh
+created a job file for seqgen --- job_seqgen_shortest.sh
+
+output: cyclo_jc_sim_shorter.fasta
+
+manually broke apart "paralogs" --- cyclo_jc_sim_shorter_paralog_sep.fasta
+
+chose 1st paralog for everything except lampreys and hagfish --- cyclo_jc_sim_shorter_one_paralog.fasta
+chose 1st paralog for everything --- cyclo_jc_sim_shorter_one_paralog_all_first.fasta
+
+created job file for iqtree --- job_iqtree_shorter.sh
+
+submitted batch job
+
+output: cyclo_jc_sim_shorter_one_paralog.fasta.treefile and cyclo_jc_sim_shorter_one_paralog.fasta.contree
+output: cyclo_jc_sim_shorter_one_paralog_all_first.fasta.treefile and cyclo_jc_sim_shorter_one_paralog_all_first.fasta.contree
+
+***in these there was a significant difference -> the one with the paralogs switched found a monophyletic cyclostome with super long branch lengths
+***to continue with this I will start playing around with different parameters such as branch lengths, 
+    and possibly other combinations of gene loss, to see if this is always relevant
