@@ -25,9 +25,7 @@ Some guidelines and tips:
 
 OK, here we go.
 
-# Title of my project
-
-The effect of hidden paralogy and missing data on phylogenetic inference
+# The effect of hidden paralogy and missing data on phylogenetic inference
 
 ## Introduction and Goals
 
