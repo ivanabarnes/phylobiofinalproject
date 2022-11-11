@@ -59,6 +59,8 @@ For more details on the methods see methods.txt
 
 The jc_sim folder is for the first time I ran the analysis, I specified a very fast rate of evolution so the tree was inaccurate over almost all taxa. The jc_sim_shorter folder has a shorter branch lengths, and with that one I found that removing the same paralog caused hagfish and lamprey to form a clade with very high branch length, which supports my hypothesis. I want to try this again but changing more parameters to see how they affect it.
 
+see jc_sim_shorter/cyclo_jc_sim_shorter_one_paralog.fasta.contree 
+
 ## Discussion
 
 These results indicate...
