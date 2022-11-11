@@ -51,11 +51,13 @@ available (probably on GenBank).
 
 ## Methods
 
-The tools I used were... See analysis files at (links to analysis files).
+I downloaded a gene from a tunicate genome from Genbank (https://www.ncbi.nlm.nih.gov/nuccore/NC_020168.2) to serve as my "ancestral" sequence. I manually copied this to simulate a WGD and then created a phylogeny roughly based on the early vertebrate phylogeny to simulate the data on. I used seqgen to generate sequences on this phylogeny, and then manually separated the two "paralogs" that I had created. I then selected the first paralog for all organisms for one analysis, and everything but hagfish and lampreys on the other. I ran these through IQTREE with modelfinder and evaluated which matched more closely to the real tree the data was simulated on.
+
+For more details on the methods see methods.txt
 
 ## Results
 
-The tree in Figure 1...
+The jc_sim folder is for the first time I ran the analysis, I specified a very fast rate of evolution so the tree was inaccurate over almost all taxa. The jc_sim_shorter folder has a shorter branch lengths, and with that one I found that removing the same paralog caused hagfish and lamprey to form a clade with very high branch length, which supports my hypothesis. I want to try this again but changing more parameters to see how they affect it.
 
 ## Discussion
 
